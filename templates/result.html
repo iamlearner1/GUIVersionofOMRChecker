@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OMR Test Result</title>
+      <link rel="stylesheet" href="{{ url_for('static', filename='styles/result.css') }}">
+</head>
+<body>
+    <h1>OMR Test Result</h1>
+
+    <h2>Original Image</h2>
+    <img src="{{ url_for('static', filename=original_image_path) }}" alt="Original Image" style="max-width: 100%; height: auto;">
+
+    <h2>Evaluated Image</h2>
+    <img src="{{ url_for('static', filename=evaluated_image_path) }}" alt="Evaluated Image" style="max-width: 100%; height: auto;">
+
+    <h2>Result</h2>
+    <p>{{ result }}</p>
+</body>
+</html>
